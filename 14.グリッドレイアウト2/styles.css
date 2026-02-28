@@ -26,7 +26,40 @@ div > div {
   background-color: crimson;
 }
 
-
 /* containerクラスのdiv要素にスタイルを適用 */
+.container {
+  display: grid;
+  grid-template-rows: 100px 100px 100px 100px;
+  grid-template-columns: 100px 100px 100px;
+}
 
 /* item〇クラスにスタイルを適用 */
+.item1 {
+  grid-row: 1;         /* 1行目 */
+  grid-column: 1;      /* 1列目 */
+}
+
+.item2 {
+  grid-row: 1 / span 2; /* 1行目から2行分を占める */
+  grid-column: 2;      /* 2列目 */
+}
+
+.item3 {
+  grid-row: 3 / span 2; /* 3行目から2行分を占める */
+  grid-column: 1;      /* 1列目 */
+}
+
+.item4 {
+  grid-row: 1;         /* 1行目 */
+  grid-column: 3;      /* 3列目 */
+}
+
+.item5 {
+  grid-row: 2;         /* 2行目 */
+  grid-column: 3;      /* 3列目 */
+}
+
+.item6 {
+  grid-row: 3 / span 2; /* 3行目から2行分を占める */
+  grid-column: 2 / span 2; /* 2列目から2列分を占める */
+}
